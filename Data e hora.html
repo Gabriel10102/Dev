@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atualização de Data e Hora</title>
+    <style>
+    body {
+        background-color: rgb(245, 195, 139);
+    }
+    .center {
+        text-align: center;
+    }
+    .img {
+        position: absolute;
+    }
+    #front {
+        background-image: url(lig.png);
+    }
+    #back {
+        background-image: url(desl.png);
+    }
+    #back:hover {
+        background-image: url(lig.png);
+        opacity: 0%;
+    }
+    #front:hover {
+        opacity: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="center"><h2>Gabriel Lins Onofre</h2></div>
+    <div id="data-hora" class="center"></div>
+    <p></p>
+    <div class="center">Bauru 1000 graus</div>
+
+<div>
+    <div class="img" id="front"><img src="lig.png" alt=""></div>
+    <div class="img" id="back"><img src="desl.png" alt=""></div>
+</div>
+
+    <script>
+      function atualizarDataHora() {
+        const agora = new Date();
+        const dataHoraElement = document.getElementById("data-hora");
+        dataHoraElement.textContent = `Data e hora atual: ${agora.toLocaleString()}`;
+      }
+
+      // Chama a função inicialmente para exibir a data e hora atual
+      atualizarDataHora();
+
+      // Atualiza a data e hora a cada segundo
+      setInterval(atualizarDataHora, 1000);
+    </script>
+  </body>
+</html>

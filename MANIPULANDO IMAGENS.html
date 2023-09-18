@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lampada</title>
+<meta charset="UTF-8">
+<style>
+/* Estilo CSS para definir um tamanho fixo para as imagens */
+img#lampada {
+width: 100px; /* Defina o tamanho desejado em pixels */
+height: auto; /* Mantém a proporção da imagem */
+}
+</style>
+</head>
+<body>
+<h1>Imagens</h1>
+<a onmouseover="mudar('lampada', 'lig.png')"
+onmouseout="mudar('lampada', 'desl.png')">
+<img src="desl.png" id="lampada">
+</a>
+<script type="text/javascript">
+function mudar(objeto, imagem) {
+lampada.src = imagem;
+}
+</script>
+</body>
+</html>
