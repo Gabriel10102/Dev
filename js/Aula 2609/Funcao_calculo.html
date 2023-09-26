@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Função com parâmetros</title>
+</head>
+<body>
+    <h1>Função com parâmetros</h1>
+    <form id="formulario">
+        <label for="nomeAluno">Nome do Aluno:</label>
+        <input type="text" id="nomeAluno" required><br><br>
+
+        <label for="nomeDisciplina">Nome da Disciplina:</label>
+        <input type="text" id="nomeDisciplina" required><br><br>
+
+        <label for="nota1">Primeira Nota:</label>
+        <input type="number" id="nota1" required><br><br>
+
+        <label for="nota2">Segunda Nota:</label>
+        <input type="number" id="nota2" required><br><br>
+
+        <input type="button" value="Calcular Média" onclick="calcularMedia()">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularMedia() {
+            var nomeAluno = document.getElementById("nomeAluno").value;
+            var nomeDisciplina = document.getElementById("nomeDisciplina").value;
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            
+            var media = (nota1 + nota2) / 2;
+            
+            var resultado = "Aluno: " + nomeAluno + "<br>";
+            resultado += "Disciplina: " + nomeDisciplina + "<br>";
+            resultado += "Primeira Nota: " + nota1 + "<br>";
+            resultado += "Segunda Nota: " + nota2 + "<br>";
+            resultado += "A média do(a) aluno(a) é: : " + media.toFixed(2);
+            
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
